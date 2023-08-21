@@ -1,0 +1,108 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+
+body {
+	background-color: black;
+}
+
+.container {
+	padding: 0.5rem;
+}
+
+.slider-wrapper {
+	position: relative;
+	max-width: 75rem;
+	margin: 0 auto;
+}
+
+.slider {
+	display: flex;
+	aspect-ratio: 16 / 9;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	border-radius: 0.5rem;
+	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+	scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+	display: none;
+}
+
+.slider img {
+	flex: 1 0 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
+}
+
+.slider-nav {
+	display: flex;
+	column-gap: 2rem;
+	position: absolute;
+	bottom: 0.5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.slider-nav a {
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	background-color: black;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+	opacity: 1;
+}
+
+
+    </style>
+        
+    <title></title>
+
+    
+</head>
+
+<body>
+    <section class="container">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide-1" src="0.png"/>
+                <img id="slide-2" src="1.png"/>
+                <img id="slide-3" src="2.png"/>
+				<img id="slide-4" src="3.png"/>
+                <img id="slide-5" src="4.png"/>
+                <img id="slide-6" src="5.png"/>
+				<img id="slide-7" src="6.png"/>
+                <img id="slide-8" src="7.png"/>
+                <img id="slide-9" src="8.png"/>
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+				<a href="#slide-4"></a>
+                <a href="#slide-5"></a>
+                <a href="#slide-6"></a>
+				<a href="#slide-7"></a>
+                <a href="#slide-8"></a>
+                <a href="#slide-9"></a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
